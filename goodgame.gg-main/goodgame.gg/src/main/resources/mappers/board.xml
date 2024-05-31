@@ -224,6 +224,7 @@
 <!--        AND outer_reply.replySequence >= 1-->
 <!--        )-->
 <!--    </delete>-->
+
     <delete id="boardReplyDeleteByReplyIndexAndBoardIndex" parameterType="integer">
         DELETE outer_reply
         FROM reply_mst AS outer_reply

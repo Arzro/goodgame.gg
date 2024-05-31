@@ -37,30 +37,30 @@ class BoardUpdateApi{
 
 
 
-    updateSelectOneBoard(){
-
-        let responseData = null;
-
-        $.ajax({
-            async: false,
-            type: "get",
-            url: `http://localhost:8000/api/board/selectOne/${boardObj.boardIndex}`,
-            data: boardObj,
-            dataType: "json",
-            success: response => {
-                this.visitBoard();
-                this.findlikeBoard();
-                responseData = response.data;
-
-            },
-            error: error => {
-                console.log(error);
-            }
-        });
-        return responseData;
-
-
-    }
+//    updateSelectOneBoard(){ // 중복코드를 하나로 합치기
+//
+//        let responseData = null;
+//
+//        $.ajax({
+//            async: false,
+//            type: "get",
+//            url: `http://localhost:8000/api/board/selectOne/${boardObj.boardIndex}`,
+//            data: boardObj,
+//            dataType: "json",
+//            success: response => {
+//                this.visitBoard();
+//                this.findlikeBoard();
+//                responseData = response.data;
+//
+//            },
+//            error: error => {
+//                console.log(error);
+//            }
+//        });
+//        return responseData;
+//
+//
+//    }
 
 
     updateBoard(){
